@@ -2,6 +2,17 @@
 
 VIM and NVIM are terminal based text editors that are very powerful.
 
+## Install Config
+
+The /nvim folder contains my NeoVIM configuration. Do the following to immediately install it.
+
+```sh
+cd ~/Downloads
+git clone https://github.com/Mooshy-Swags/nvim
+mv nvim/nvim ~/.config
+rm -rf nvim
+```
+
 ### Etymology
 
 NeoVIM started off as Vi (Visual), then got VIM (Vi IMproved) then we got NeoVIM
