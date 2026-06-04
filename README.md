@@ -6,7 +6,7 @@ VIM and NVIM are terminal based text editors that are very powerful.
 
 The /nvim folder contains my NeoVIM configuration. Do the following to immediately install it.
 
-```sh
+```
 cd ~/Downloads
 git clone https://github.com/Mooshy-Swags/nvim
 mv nvim/nvim ~/.config
@@ -135,6 +135,20 @@ There is also changing the size of the menu, which uses
 
 Where it just uses < and > for size changing. You can also specify the number of characters this should extend the window size by.
 
+### Undo/Redo
+
+Very important.
+
+```
+<u>
+<C-r>
+```
+
+Why is Redo not simple? idk but this is how you do it.
+
+Oh the number of times I have undone something instead of entering Insert mode... Speaking of, that's the next one.
+
+
 ---
 
 These are the main Normal mode actions you may do. There are many other options in Normal mode, which you can find yourself if you need.
@@ -172,11 +186,21 @@ Copying in vim is called a yank, which normally is done with <y> header, but my 
 
 ### Paste
 
-Use <C-S-v> as default on vim.
+Use <C-S-v> as default on vim and Konsole in general.
+
+### Batch Comment
+
+How lovely. Commenting multiple lines selected in Visual mode. Here, the <g> header comes back!
+
+```
+<g>c
+```
+
+You can do the same thing to un-comment.
 
 ### Re-select
 
-The <g> header comes back!
+Even more <g> headers!
 
 ```
 <g>v
@@ -242,3 +266,100 @@ Now if you want to void the saved cache, without saving the file, you can simply
 
 Some forcing is sometimes needed when a file acts up.
 
+# NVIM Plugins
+
+Here, I'll quickly go through the plugins from my configuration. You can easily add new ones if you wish.
+
+## Lazy
+
+The most important one, allowing you to install plugins, basically a package manager for NVIM
+
+Open menu with
+
+```
+:Lazy
+```
+
+## LuaLine
+
+The bottom bar that looks cool
+
+## Mason
+
+Mason allows you to add and configure Language Servers, basically what you are doing when adding the extensions for a specific language on VSCode. (Like the python one)
+
+I basically set it up and never use it...
+
+You can add extra by opening 
+
+```
+:Mason
+```
+
+## Neo-Tree
+
+Oh my favourite.
+
+I have set 
+
+```
+< >n
+```
+
+To open/enter the file tree system on the left. You can configure this to place it anywhere. I have also set it to open automatically on launch.
+
+
+
+## Noice
+
+Makes things look Noice
+
+This is the plugin that makes the Command line and Error messages look nice. Sometimes it gets in the way though, so you can open the command line error logs using:
+
+```
+:Noice history
+```
+
+How Noice
+
+## CMP
+
+NeoVIM Completer is the line completion hotline that basically handles all of the text finishers. Any AI based text finishers also use this plugin and co-works. I have them disabled using comments, but you can re-enable it using the key commands in the Visual mode section.
+
+You can use
+
+```
+<C-o>
+```
+
+To fill with the selection or
+
+```
+<C-e>
+```
+
+To reject the entire menu from appearing once, if it is getting in your way.
+
+## Synthweave
+
+My favourite skin for NeoVIM. Change as you wish.
+
+## Telescope
+
+Allows you to find specific words or phrases or variables or whatever from wherever (beyond the CWD)
+
+Finding files:
+
+```
+<C-p>
+```
+
+Finding words:
+
+```
+<C-f>
+```
+
+## Tree-sitter
+
+Highlighter, so the text looks pretty!
