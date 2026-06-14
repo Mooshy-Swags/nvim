@@ -148,6 +148,34 @@ Why is Redo not simple? idk but this is how you do it.
 
 Oh the number of times I have undone something instead of entering Insert mode... Speaking of, that's the next one.
 
+### New line
+
+A simple idea, but being able to add a new line above or below without being at the end or start of the line is very useful.
+
+```
+<o>
+<S-o>
+```
+
+Simple command, but very versitile.
+
+### Delete Line
+
+Wow, what an idea! Adding a new line comes with its counterpart, which deletes the entire line you are on. Be careful though, because any curled lines are counted as the same line still! This means that long lines will entirely be deleted if you delete a part of it!
+
+```
+<d>d
+```
+
+### Replace character
+
+Surprisingly useful. Since you can replace from in Normal mode, and you don't need to delete anything, this can make for simpler replacements. (though not as useful)
+```
+<r>
+```
+It is followed by the character you would like to replace it with.
+
+
 
 ---
 
@@ -266,6 +294,19 @@ Now if you want to void the saved cache, without saving the file, you can simply
 
 Some forcing is sometimes needed when a file acts up.
 
+
+### Find and replace
+
+Sometimes, you want to do CTRL+f and replace some selection of words. This is actually built into vim through a command.
+
+```
+:%s/OLD/NEW/g
+```
+
+%s is the substitution command, followed by the old word, and new word. g makes sure all instances of the word is replaced. If you do not wish for this to happen, well remove it.
+
+For finding terms, the Telescope plugin does much better. See below.
+
 # NVIM Plugins
 
 Here, I'll quickly go through the plugins from my configuration. You can easily add new ones if you wish.
@@ -363,3 +404,10 @@ Finding words:
 ## Tree-sitter
 
 Highlighter, so the text looks pretty!
+
+
+## Copilot / Codeium
+
+Both Copilot and Codeium are AI based auto-line generators. They work the same way they would work in VSCode, but I have them disabled myself as I don't prefer having it. If you do prefer it, uncomment the code in their respective files under ~/.config/nvim/lua/plugins/ and for Copilot, uncomment in the ~/.config/nvim/init.lua as well.
+
+
