@@ -8,7 +8,7 @@ The /nvim folder contains my NeoVIM configuration. Do the following to immediate
 
 ```
 cd ~/Downloads
-git clone https://github.com/Mooshy-Swags/nvim
+git clone https://github.com/Mooshy-Swags/nvim.git
 mv nvim/nvim ~/.config
 rm -rf nvim
 ```
